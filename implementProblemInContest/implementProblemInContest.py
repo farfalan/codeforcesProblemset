@@ -1,3 +1,6 @@
+import math
+import sys
+
 import numpy as np
 print("input:")
 w = int(input())
