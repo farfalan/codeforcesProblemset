@@ -1,3 +1,4 @@
+#https://codeforces.com/problemset/problem/1843/C
 import math
 import sys
 
