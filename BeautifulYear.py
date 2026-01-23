@@ -1,0 +1,21 @@
+#https://codeforces.com/problemset/problem/271/A
+year = int(input())
+flag = False
+for k in range(year+1,9000,1):
+    yearDigits = [int(digit) for digit in str(k)]
+    print(yearDigits)
+    for i in range(len(yearDigits)):
+        for j in range(i+1,len(yearDigits)):
+            if yearDigits[i] == yearDigits[j]:
+                flag = True
+                continue
+        if flag == True:
+            continue
+    if flag == True:
+        flag = False
+        continue
+    else:
+        print(k)
+        break
+
+
