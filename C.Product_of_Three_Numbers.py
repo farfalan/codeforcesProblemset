@@ -1,20 +1,23 @@
 #https://codeforces.com/contest/1294/problem/C
 
-n = 220
+n = 24
 found = 0
 
-for i in range(2,n + 1,1):
+for i in range(2, n + 1, 1):
     if n % i == 0:
         a = n // i
-        for j in range(i + 1 ,a +1, 1):
-            if a % j == 0:
+        for j in range(2, a + 1, 1):
+            if a % j == 0 and j != i:
                 b =  a // j
-                for k in range(j + 1 ,b +1, 1):
-                    if b % k == 0:
+                for k in range(2 ,b + 1, 1):
+                    if b % k == 0 and k != j and k != i:
                         c =  b // k
-                        found = 1
-                        print(i ,j , k)
-                        break
+                        if i * j * k == n:
+                            found = 1
+                            print(i, j, k)
+                            break
+                        else:
+                            continue
                 break        
         break        
             
